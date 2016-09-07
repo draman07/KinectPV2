@@ -185,7 +185,7 @@ public class Device implements Constants, FaceProperties, SkeletonProperties,
 
 		if (startSensor) {
 			runningKinect = true;
-			(new Thread(this)).start();
+//			(new Thread(this)).start();
 		}
 	}
 	
@@ -215,9 +215,9 @@ public class Device implements Constants, FaceProperties, SkeletonProperties,
 		PApplet.arrayCopy(colorData, 0, colorImg.pixels(), 0,
 				colorImg.getImgSize());
 		colorImg.updatePixels();
-
-        PApplet.arrayCopy(colorData, 0, colorImg.rawIntData, 0,
-                colorImg.getImgSize());
+//
+//        PApplet.arrayCopy(colorData, 0, colorImg.rawIntData, 0,
+//                colorImg.getImgSize());
 
 
 		return colorImg.img;

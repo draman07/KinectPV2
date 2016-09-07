@@ -144,18 +144,18 @@ public class PointCloudColorTest extends PApplet {
 		  {
 		    pgl.bindBuffer(PGL.ARRAY_BUFFER, vertexVboId);
 		    // fill VBO with data
-		    pgl.bufferData(PGL.ARRAY_BUFFER, Float.BYTES * vertData, pointCloudBuffer, PGL.DYNAMIC_DRAW);
+		    pgl.bufferData(PGL.ARRAY_BUFFER, Float.SIZE * vertData, pointCloudBuffer, PGL.DYNAMIC_DRAW);
 		    // associate currently bound VBO with shader attribute
-		    pgl.vertexAttribPointer(vertLoc, 3, PGL.FLOAT, false, Float.BYTES * 3, 0);
+		    pgl.vertexAttribPointer(vertLoc, 3, PGL.FLOAT, false, Float.SIZE * 3, 0);
 		  }
 
 		  // color
 		  {
 		    pgl.bindBuffer(PGL.ARRAY_BUFFER, colorVboId);
 		    // fill VBO with data
-		    pgl.bufferData(PGL.ARRAY_BUFFER, Float.BYTES * vertData, colorBuffer, PGL.DYNAMIC_DRAW);
+		    pgl.bufferData(PGL.ARRAY_BUFFER, Float.SIZE * vertData, colorBuffer, PGL.DYNAMIC_DRAW);
 		    // associate currently bound VBO with shader attribute
-		    pgl.vertexAttribPointer(colorLoc, 3, PGL.FLOAT, false, Float.BYTES * 3, 0);
+		    pgl.vertexAttribPointer(colorLoc, 3, PGL.FLOAT, false, Float.SIZE * 3, 0);
 		  }
 
 		  // unbind VBOs
